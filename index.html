@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi proyecto GIT</title>
+    <title>Sabores</title>
 </head>
 <body>
-    <h1>Proyecto de practica personal GIT</h1>
-    <p>Cambio 1</p>
 
-    <h3>Se cambia por tercera vez</h3>
+    <h1>Sabores de Helado</h1>
 
-    
+    <button onclick="mostrar()">Mostrar</button>
+    <button onclick="agregar()">Agregar</button>
+    <button onclick="contar()">Contar</button>
+
+    <p id="texto"></p>
+
+    <script>
+
+        let sabores = ["Chocolate", "Vainilla", "Fresa"];
+
+        function mostrar() {
+            document.getElementById("texto").innerHTML = sabores;
+        }
+
+        function agregar() {
+            sabores.push("Mango");
+            document.getElementById("texto").innerHTML = "Se agregó Mango";
+        }
+
+        function contar() {
+            document.getElementById("texto").innerHTML =
+            "Total: " + sabores.length;
+        }
+
+    </script>
+
 </body>
-<footer>
-    <h1>tercer commit</h1>
-</footer>
 </html>
